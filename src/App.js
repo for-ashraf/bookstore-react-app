@@ -1,10 +1,9 @@
 import React from 'react';
-import Calculator from './components/Calculator';
+import Home from './components/Calculator';
 
 function App() {
   return (
-    <Calculator />
+    <Home />
   );
 }
-
 export default App;
