@@ -5,7 +5,7 @@
 - Microverse - React project
 
 ## Acces link
-> on progress...
+> In progress...
 
 ## Tech ⌘⇧
 - **HTML & CSS best practices:** Correct use of tags, elements, properties and syntax.
@@ -20,8 +20,8 @@
 ## Setup
 
 - Use the following link for "$ git clone" the repo:
-https://github.com/Vitor-Guedes-Madeira/Bookstore-React/
-- cd Bookstore-React
+https://github.com/for-ashraf/bookstore-react-app/
+- cd bookstore-react-app
 - "npm install" to install all the dependencies
 - "npm start" to run the live version locally
 - "code ." To open the project on your local editor
@@ -32,9 +32,9 @@ https://github.com/Vitor-Guedes-Madeira/Bookstore-React/
 ## Author
 
 👤 **Vitor Guedes Madeira**
-- GitHub: [@vitorguedesmadeira](https://github.com/VitorGuedesMadeira)
-- Twitter: [@CDahguedes](https://twitter.com/CDahguedes)
-- LinkedIn: (https://www.linkedin.com/in/v%C3%ADtor-guedes-madeira-1691aa15a/)
+- GitHub: [@vitorguedesmadeira](https://github.com/for-ashraf)
+- Twitter: [@CDahguedes](https://twitter.com/forashraf)
+- LinkedIn: (https://www.linkedin.com/in/muhammad-ashraf-30031439/)
 
 ## 🤝 Contributing
 
