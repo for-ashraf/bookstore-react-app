@@ -5,15 +5,54 @@
 }
 
 body {
-  display: grid;
-  place-content: center;
-  height: 100vh;
   font-size: 2rem;
 }
 
+/* Pages */
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+  justify-content: space-between;
+}
+
+.header a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  border-left: 2px solid grey;
+}
+
+.home {
+  margin: 2rem;
+}
+
+.home h2 {
+  margin-bottom: 10px;
+  font-size: 37px;
+}
+
+.home p {
+  margin: 2rem;
+  font-size: 28px;
+}
+
+.quote {
+  text-align: center;
+  width: 70%;
+  margin: 10rem;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 5rem;
+}
+
 .container {
-  height: 80vh;
-  width: 70vh;
+  height: 75vh;
+  width: 90vh;
   background-color: rgb(210, 204, 212);
   padding: 0.3rem;
 }
