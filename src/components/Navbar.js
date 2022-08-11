@@ -18,7 +18,7 @@ function Navigation() {
   return (
     <nav>
       <div className="navContainer">
-        <h3 className="logo">Bookstore</h3>
+        <h3 className="logo">EducationSoul</h3>
         <ul className="navLinks">
           {links.map((link) => (
             <li className="NavLink" key={link.id}>

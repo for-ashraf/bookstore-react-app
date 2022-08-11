@@ -5,13 +5,13 @@ import BookList from '../components/BookList';
 export default function Bookstore() {
   const books = [{
     id: 1,
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
+    title: 'First Book',
+    author: 'First Author',
   },
   {
     id: 2,
-    title: 'Dune',
-    author: 'Frank Herbert',
+    title: 'Second Book',
+    author: 'Second Author',
   }];
   return (
     <div className="books-container">
