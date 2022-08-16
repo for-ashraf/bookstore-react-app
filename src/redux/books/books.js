@@ -1,4 +1,4 @@
-import Book from '../../components/Book';
+import Book from '../../components/BookItem.js';
 
 // Actions
 const ADDBOOK = 'ADDBOOK';
