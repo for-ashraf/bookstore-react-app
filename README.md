@@ -32,8 +32,8 @@ https://github.com/for-ashraf/bookstore-react-app/
 ## Author
 
 👤 **Vitor Guedes Madeira**
-- GitHub: [@vitorguedesmadeira](https://github.com/for-ashraf)
-- Twitter: [@CDahguedes](https://twitter.com/forashraf)
+- GitHub: (https://github.com/for-ashraf)
+- Twitter: (https://twitter.com/forashraf)
 - LinkedIn: (https://www.linkedin.com/in/muhammad-ashraf-30031439/)
 
 ## 🤝 Contributing
