@@ -1,4 +1,4 @@
-import Book from '../../components/BookItem.js';
+import Book from '../../components/BookItem';
 
 // Actions
 const ADDBOOK = 'ADDBOOK';
@@ -18,9 +18,9 @@ export default function reducer(state = [], action = {}) {
 
 // Action Creators
 export function addBook(book) {
-  return { type: ADD, book };
+  return { type: ADDBOOK, book };
 }
 
 export function removeBook(book) {
-  return { type: REMOVE, book };
+  return { type: REMOVEBOOK, book };
 }
