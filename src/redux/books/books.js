@@ -1,17 +1,26 @@
+import Book from '../../components/Book';
+
+// Actions
 const ADDBOOK = 'ADDBOOK';
 const REMOVEBOOK = 'REMOVEBOOK';
 
-export const addBook = () => {
-    
-    return ({ 
-        type: ADDBOOK
-    });
+// Reducer
+export default function reducer(state = [], action = {}) {
+  switch (action.type) {
+    case ADDBOOK: return [
+      ...state,
+      Book,
+    ];
+    case REMOVEBOOK: return state.filter((book) => (book.id !== action.book.id));
+    default: return state;
   }
+}
 
-export const removeBook = () => {
-    
-    return ({ 
-        type: REMOVEBOOK
-    });
-  }
+// Action Creators
+export function addBook(book) {
+  return { type: ADD, book };
+}
 
+export function removeBook(book) {
+  return { type: REMOVE, book };
+}
