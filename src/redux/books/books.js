@@ -1,26 +1,50 @@
-import Book from '../../components/BookItem';
+import { v4 as uuidv4 } from 'uuid';
 
 // Actions
-const ADDBOOK = 'ADDBOOK';
-const REMOVEBOOK = 'REMOVEBOOK';
+const ADD = 'ADD';
+const REMOVE = 'REMOVE';
+
+const initialState = [
+  {
+    id: uuidv4(),
+    title: 'You don\'t know JS yet',
+    author: 'Kyle Simpson',
+  },
+  {
+    id: uuidv4(),
+    title: 'Eloquent JavaScript',
+    author: 'Marijn Haverbeke',
+  },
+  {
+    id: uuidv4(),
+    title: 'Hands-On Design Patterns with Java',
+    author: 'Dr. Edward Lavieri',
+  },
+];
 
 // Reducer
-export default function reducer(state = [], action = {}) {
+export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
-    case ADDBOOK: return [
-      ...state,
-      Book,
+    case ADD:
+      return [
+        ...state,
+        {
+          id: uuidv4(),
+          ...action.book,
+        },
+      ];
+    case REMOVE: return [
+      ...state.filter((book) => (book.id !== action.bookID)),
     ];
-    case REMOVEBOOK: return state.filter((book) => (book.id !== action.book.id));
     default: return state;
   }
 }
 
 // Action Creators
 export function addBook(book) {
-  return { type: ADDBOOK, book };
+  return { type: ADD, book };
 }
 
-export function removeBook(book) {
-  return { type: REMOVEBOOK, book };
+export function removeBook(bookID) {
+  return { type: REMOVE, bookID };
 }
