@@ -3,13 +3,12 @@ import './BookItem.css';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
-
 export default function BookItem(props) {
   const propsAr = props;
   const { id, title, author } = propsAr.book;
   const dispatch = useDispatch();
   const handleClick = () => dispatch(removeBook(id));
- 
+
   return (
     <li key={id} className="book-wrapper">
       <span className="title">{title}</span>

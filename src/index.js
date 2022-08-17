@@ -6,15 +6,14 @@ import App from './App';
 import Navbar from './components/Navbar';
 import bookStore from './redux/configureStore';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={bookStore}>
-    <HashRouter>
-    <Navbar />
-      <App />
-    </HashRouter>
+      <HashRouter>
+        <Navbar />
+        <App />
+      </HashRouter>
     </Provider>
   </React.StrictMode>,
 );
