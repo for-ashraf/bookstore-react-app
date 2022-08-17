@@ -7,7 +7,7 @@ function BookList() {
   const state = useSelector((state) => state.booksReducer);
   return (
     <>
-      <div>
+      <div className="books-list">
         {state.map((book) => (
           <Book
             id={book.id}

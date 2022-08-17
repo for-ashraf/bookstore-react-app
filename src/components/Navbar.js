@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const links = [
   {
@@ -14,12 +15,12 @@ const links = [
 ];
 function Navbar() {
   return (
-    <div className="navbarContainer">
+    <div className="navContainer">
       <nav>
-        <h1 className="mainTitle">Bookstore CMS</h1>
-        <ul className="navBar">
+        <h3 className="logo">EducationSoul</h3>
+        <ul className="navLinks">
           {links.map((link) => (
-            <li key={link.id}>
+            <li className="NavLink" key={link.id}>
               <Link to={link.path}>{link.text}</Link>
             </li>
           ))}
