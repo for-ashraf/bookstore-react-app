@@ -1,16 +1,22 @@
 import React from 'react';
 import BookItem from './BookItem';
+import BookForm from './BookForm';
 
 export default function BookList(props) {
-  const propsAr = props;
+  const state = useSelector((state) => state.booksReducer);
   return (
+    <>
     <ul className="books-list">
-      {propsAr.books.map((book) => (
+      {state.books.map((book) => (
         <BookItem
           key={book.id}
-          book={book}
+          id={book.id}
+          title={book.title}
+          author={book.author}
         />
       ))}
     </ul>
+    <BookForm />
+    </>
   );
 }
