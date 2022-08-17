@@ -6,7 +6,6 @@ import '../index.css';
 
 function AddBookForm() {
   const [bookData, createBook] = useState({ title: '', author: '' });
-  // const { titleEntry, authorEntry } = bookData;
   const newBook = (e) => (
     createBook({
       ...bookData,
