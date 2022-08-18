@@ -1,12 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import './BookItem.css';
-import { removeBook } from '../redux/books/books';
+import { retrieveBooks, removeBook } from '../redux/books/books';
 
-function Book(props) {
-  const { title, author, id } = { ...props };
+export default function Book(props) {
+  const { id, title, author } = { ...props };
   const dispatch = useDispatch();
-  const handleClick = () => dispatch(removeBook(id));
+  const handleClick = async () => {
+    await dispatch(removeBook(id));
+    dispatch(retrieveBooks());
+  };
   return (
     <section className="book-wrapper">
       <h2 className="title">{title}</h2>
@@ -15,5 +17,3 @@ function Book(props) {
     </section>
   );
 }
-
-export default Book;

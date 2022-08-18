@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
-import '../index.css';
+import { addBook, retrieveBooks } from '../redux/books/books';
 
-function AddBookForm() {
+export default function AddBookForm() {
   const [bookData, createBook] = useState({ title: '', author: '' });
+  // const { titleEntry, authorEntry } = bookData;
   const newBook = (e) => (
     createBook({
       ...bookData,
       [e.target.name]: e.target.value,
     }));
   const dispatch = useDispatch();
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(addBook({
+    await dispatch(addBook({
       ...bookData,
-      id: uuidv4(),
+      item_id: uuidv4(),
     }));
+    dispatch(retrieveBooks());
     e.target.reset();
   };
   return (
@@ -29,5 +30,3 @@ function AddBookForm() {
     </form>
   );
 }
-
-export default AddBookForm;
