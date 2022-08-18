@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook, retrieveBooks } from '../redux/books/books';
 
-function AddBookForm() {
+export default function AddBookForm() {
   const [bookData, createBook] = useState({ title: '', author: '' });
   // const { titleEntry, authorEntry } = bookData;
   const newBook = (e) => (

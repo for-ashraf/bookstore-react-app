@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import AddBookForm from './AddBookForm';
 import Book from './Book';
 
-function BookList() {
+export default function BookList() {
   const state = useSelector((state) => state.booksReducer);
   return (
     <>
@@ -24,5 +24,3 @@ function BookList() {
     </>
   );
 }
-
-export default BookList;
