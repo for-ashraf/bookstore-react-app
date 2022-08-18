@@ -30,5 +30,3 @@ function AddBookForm() {
     </form>
   );
 }
-
-export default AddBookForm;

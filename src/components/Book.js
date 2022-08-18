@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook, retrieveBooks } from '../redux/books/books';
+import { retrieveBooks, removeBook } from '../redux/books/books';
 
-function Book(props) {
-  const { title, author, id } = { ...props };
+export default function Book(props) {
+  const { id, title, author } = { ...props };
   const dispatch = useDispatch();
   const handleClick = async () => {
     await dispatch(removeBook(id));
@@ -17,5 +17,3 @@ function Book(props) {
     </section>
   );
 }
-
-export default Book;
