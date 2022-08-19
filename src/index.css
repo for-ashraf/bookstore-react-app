@@ -209,14 +209,6 @@ a {
   transform: rotate(45deg);
 }
 
-.form-container {
-  width: 75vw;
-  height: auto;
-  margin: 0 2.5vw 4.063vw 6.3vw;
-  padding: 0 0 1vh 0;
-  border-radius: 4px;
-}
-
 .completed {
   font-size: 0.875vw;
   opacity: 0.5;
@@ -271,13 +263,6 @@ p {
   margin-top: 0.438vh;
   font-size: 1vw;
   letter-spacing: -0.4px;
-}
-
-.progress-divider {
-  width: 0.125vw;
-  height: 8.375vh;
-  margin: 0 3.688vw 0 4.938vh;
-  background-color: #e8e8e8;
 }
 
 .progress-container {
