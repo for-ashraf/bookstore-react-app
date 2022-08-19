@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook, retrieveBooks } from '../redux/books/books';
 
-export default function AddBookForm() {
+function AddBookForm() {
   const [bookData, createBook] = useState({ title: '', author: '' });
   // const { titleEntry, authorEntry } = bookData;
   const newBook = (e) => (
@@ -22,11 +22,18 @@ export default function AddBookForm() {
     e.target.reset();
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>ADD NEW BOOK</h2>
-      <input type="text" id="titleInput" className="input-title" required name="title" placeholder="Book title" onChange={newBook} />
-      <input type="text" id="authorInput" className="input-author" required name="author" placeholder="Author" onChange={newBook} />
-      <button type="submit" className="input-submit">ADD BOOK</button>
-    </form>
+    <>
+      <div className="horizontal-divider" />
+      <div className="form-container">
+        <h2 className="form-title">ADD NEW BOOK</h2>
+        <form onSubmit={handleSubmit} className="form">
+          <input type="text" className="input title-input" id="titleInput" required name="title" placeholder="Book title" onChange={newBook} />
+          <input type="text" className="input" id="authorInput" required name="author" placeholder="Author" onChange={newBook} />
+          <button className="primary-button-big blueButton" type="submit">ADD BOOK</button>
+        </form>
+      </div>
+    </>
   );
 }
+
+export default AddBookForm;

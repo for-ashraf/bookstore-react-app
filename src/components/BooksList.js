@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useSelector } from 'react-redux';
 import AddBookForm from './AddBookForm';
 import Book from './Book';
 
-export default function BookList() {
+function BookList() {
   const state = useSelector((state) => state.booksReducer);
+  useEffect(() => {
+    document.querySelector('.BOOKS').className = 'BOOKS active';
+    document.querySelector('.CATEGORIES').className = 'CATEGORIES';
+  });
   return (
     <>
-      <div>
+      <div className="bookList">
         {state.map((book) => (
           <Book
             id={book.id}
@@ -24,3 +28,5 @@ export default function BookList() {
     </>
   );
 }
+
+export default BookList;
