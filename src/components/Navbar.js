@@ -14,9 +14,9 @@ const links = [
 ];
 function Navbar() {
   return (
-    <div className="navbarContainer">
+    <div className="navContainer">
       <nav className="navbar">
-        <h1 className="mainTitle">Bookstore CMS</h1>
+        <h1 className="mainTitle">Education Soul</h1>
         <ul className="navBarUl">
           {links.map((link) => (
             <li key={link.id} className={link.text}>

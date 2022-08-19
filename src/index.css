@@ -38,6 +38,15 @@ button {
   border-image: initial;
 }
 
+.navContainer {
+  width: 81.25vw;
+  height: 5.938vw;
+  margin: 0 2.5vw 4.063vw 0;
+  padding: 0 0 0 6.25vw;
+  background-color: #fff !important;
+  border: solid 1px #e8e8e8;
+}
+
 .mainTitle {
   width: 15vw;
   height: 5.313vh;
@@ -50,15 +59,6 @@ button {
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
-}
-
-.navbarContainer {
-  width: 81.25vw;
-  height: 5.938vw;
-  margin: 0 2.5vw 4.063vw 0;
-  padding: 0 0 0 6.25vw;
-  background-color: #fff !important;
-  border: solid 1px #e8e8e8;
 }
 
 .navbar {
@@ -188,14 +188,6 @@ a {
   border-right: 1px solid #bbb;
 }
 
-.form-container {
-  width: 75vw;
-  height: auto;
-  margin: 0 2.5vw 4.063vw 6.3vw;
-  padding: 0 0 1vh 0;
-  border-radius: 4px;
-}
-
 .circular-progress-container {
   margin-left: auto;
   width: 5.625vw;
@@ -215,6 +207,14 @@ a {
   border-left-color: #e8e8e8;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.form-container {
+  width: 75vw;
+  height: auto;
+  margin: 0 2.5vw 4.063vw 6.3vw;
+  padding: 0 0 1vh 0;
+  border-radius: 4px;
 }
 
 .completed {
@@ -271,6 +271,13 @@ p {
   margin-top: 0.438vh;
   font-size: 1vw;
   letter-spacing: -0.4px;
+}
+
+.progress-divider {
+  width: 0.125vw;
+  height: 8.375vh;
+  margin: 0 3.688vw 0 4.938vh;
+  background-color: #e8e8e8;
 }
 
 .progress-container {
