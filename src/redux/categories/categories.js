@@ -1,15 +1,20 @@
-// Actions
-const CHECK_STATUS = 'CHECK_STATUS';
+// actions
+const CHECK_STATUS = '/src/redux/Categories/CHECKING_STATUS';
 
-// Reducer
-export default function reducer(state = [], action = {}) {
+// reducer
+const reducer = (state = [], action) => {
   switch (action.type) {
-    case CHECK_STATUS: return 'Under construction';
-    default: return state;
+    case CHECK_STATUS:
+      return action.payload;
+    default:
+      return state;
   }
-}
+};
 
-// Action Creators
-export function checkStatus() {
-  return { type: CHECK_STATUS };
-}
+export default reducer;
+
+// action creators
+export const checkStatus = () => ({
+  type: CHECK_STATUS,
+  payload: 'Under construction',
+});

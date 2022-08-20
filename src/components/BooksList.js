@@ -1,32 +1,25 @@
 import React, { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useSelector } from 'react-redux';
-import AddBookForm from './AddBookForm';
+import { useSelector, useDispatch } from 'react-redux';
+import { retrieveBooks } from '../redux/books/books';
 import Book from './Book';
 
-function BookList() {
-  const state = useSelector((state) => state.booksReducer);
+const BookList = () => {
+  const booksList = useSelector((state) => state.booksReducer);
+  const dispatch = useDispatch();
   useEffect(() => {
-    document.querySelector('.BOOKS').className = 'BOOKS active';
-    document.querySelector('.CATEGORIES').className = 'CATEGORIES';
-  });
-  return (
-    <>
-      <div className="bookList">
-        {state.map((book) => (
-          <Book
-            id={book.id}
-            key={uuidv4()}
-            title={book.title}
-            author={book.author}
-          />
-        ))}
-        {' '}
+    dispatch(retrieveBooks());
+  }, []);
 
-      </div>
-      <AddBookForm />
-    </>
+  return (
+    <ul className="books-list">
+      {booksList.map((book) => (
+        <li key={uuidv4()}>
+          <Book key={uuidv4()} title={book.title} author={book.author} id={book.id} />
+        </li>
+      ))}
+    </ul>
   );
-}
+};
 
 export default BookList;
