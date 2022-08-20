@@ -1,24 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { CircularProgress } from '@mui/material';
 import { removeBook, retrieveBooks } from '../redux/books/books';
-import './BookItem.css';
-
-function CircularProgressWithLabel(props) {
-  /* eslint-disable */
-  return <CircularProgress variant="determinate" {...props} size={"80px"} />;
-  /* eslint-enable */
-}
-
-export function CircularStatic() {
-  const [progress, setProgress] = React.useState(0);
-
-  React.useEffect(() => {
-    setProgress(30 + (Math.floor(Math.random() * 10)));
-  }, []);
-
-  return <CircularProgressWithLabel value={progress} />;
-}
 
 function Book(props) {
   const { title, author, id } = { ...props };
@@ -28,51 +10,36 @@ function Book(props) {
     dispatch(retrieveBooks());
   };
   return (
-    <li className="book-wrapper" id={id}>
-      <div className="left-container">
-        <div className="book-group">
-          <span className="title">{title}</span>
-          <span className="author">{author}</span>
-        </div>
-        <div className="button-group">
-          <button type="button" className="com-button" disabled>
-            Comments
-          </button>
-          <button
-            id={id}
-            className="del-button"
-            onClick={handleClick}
-            type="button"
-          >
-            Remove
-          </button>
-          <button type="button" className="edit-button" disabled>
-            Edit
-          </button>
+    <section className="book">
+      <div className="bookInfo">
+        <h2 className="bookTitle">{title}</h2>
+        <h3 className="bookAuthor">{author}</h3>
+        <div className="buttonContainer">
+          <button type="button" className="removeButton bookButton" onClick="#">Comments</button>
+          <button type="button" className="removeButton bookButton" id={id} onClick={handleClick}>Remove</button>
+          <button type="button" className="bookButton" onClick="#">Edit</button>
         </div>
       </div>
-      <div className="middle-container">
-        <CircularStatic />
-        <div className="completed-progress">
-          <span className="percentage">
-            {Math.floor(Math.random() * 101)}
-            %
-          </span>
-          <span className="text-complete">Completed</span>
+      <div className="progress-container">
+        <div className="circular-progress-container">
+          <div className="circular-progress" />
+        </div>
+        <div className="progress-stat">
+          <p className="percent-complete">64%</p>
+          <p className="completed">Completed</p>
+        </div>
+        <div className="progress-divider" />
+        <div className="current-chapter-container">
+          <div>
+            <p className="current-chapter-label">CURRENT CHAPTER</p>
+            <p className="current-chapter">Chapter 17</p>
+          </div>
+          <div>
+            <button className="primary-button blueButton" type="button">UPDATE PROGRESS</button>
+          </div>
         </div>
       </div>
-      <div className="right-container">
-        <span className="current-chapter">Current Chapter</span>
-        <span className="chapter">
-          Chapter
-          {' '}
-          {Math.floor(Math.random() * 101)}
-        </span>
-        <button type="button" className="progress-button" disabled>
-          Update Progress
-        </button>
-      </div>
-    </li>
+    </section>
   );
 }
 
