@@ -1,76 +1,358 @@
-body {
-  background-color: rgb(250, 250, 250);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
-  padding: 0;
   margin: 0;
-  text-decoration: none;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #fff;
-  padding-left: 3rem;
-  height: 50px;
-}
-
-.links {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  margin-left: 3rem;
-}
-
-.links a {
-  color: black;
-  text-decoration: none;
-}
-
-.card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 1.5rem;
-  background-color: #fff;
-  padding: 2rem;
-  align-items: center;
-}
-
-.card ul {
+  padding: 0;
+  box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
-button {
-  background-color: rgb(2, 144, 255);
-  color: #fff;
-  border: none;
-  padding: 6px;
-  border-radius: 2px;
-}
-
-.forms {
+.app-container {
+  background-color: #31436e;
+  background-image: url(./images/45-degree-fabric-light.png), radial-gradient(rgba(0, 0, 255, 0.319), black);
   display: flex;
-  flex-direction: row;
-  margin: 2rem;
-  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 3.5%;
+}
+
+.navigation-bar {
+  width: 100%;
+  height: 5.938rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 15px 40px;
+}
+
+.nav-logo {
+  min-width: max-content;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+  background: -webkit-linear-gradient(#4395fc, rgb(26, 24, 41));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-div1 {
+  display: flex;
+  gap: 20%;
+}
+
+.nav-div2 {
+  display: flex;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.nav-user-icon {
+  width: 20px;
+}
+
+.nav-ul {
+  display: flex;
+  align-items: center;
+  gap: 20%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.bookstore-link {
+  color: #121212;
+}
+
+.bookstore-link:hover,
+.bookstore-link:focus {
+  color: rgb(55, 55, 124);
+  border-bottom: 1px solid rgb(55, 55, 124);
+}
+
+.categories-link {
+  color: #121212;
+}
+
+.categories-link:hover,
+.categories-link:focus {
+  color: rgb(55, 55, 124);
+  border-bottom: 1px solid rgb(55, 55, 124);
+}
+
+.books-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(238, 239, 247);
+  background-image: url(./images/dotnoise-light-grey.png);
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.books-categories {
+  background-color: rgb(238, 239, 247);
+  background-image: url(./images/dotnoise-light-grey.png);
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.books-categories button {
+  background-image: linear-gradient(to bottom, #4395fc, rgb(56, 54, 79));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+  font-weight: 600;
+  transition-duration: 0.2s;
+}
+
+.books-form button {
+  background-image: linear-gradient(to bottom, #4395fc, rgb(56, 54, 79));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+  font-weight: 600;
+  transition-duration: 0.2s;
+}
+
+.books-categories button:hover,
+.books-categories button:focus {
+  transform: scale(1.05);
+}
+
+.single-book {
+  color: rgb(3, 0, 80);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e8e8e8;
+  padding: 25px 10% 25px 25px;
+  font-family: 'Roboto Slab', serif;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+.single-book-div1 {
+  width: 400px;
+  overflow: hidden;
+}
+
+.single-book-div1 .genre {
+  color: #888;
+}
+
+.single-book-div1 p {
+  color: #4386bf;
+}
+
+.single-book-options {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.delete-btn {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.05em;
+  color: #4386bf;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  color: rgb(199, 3, 3);
+}
+
+.update-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.update-progress-btn {
+  background-image: linear-gradient(to bottom, #4395fc, rgb(56, 54, 79));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+  font-weight: 600;
+  transition-duration: 0.2s;
+}
+
+.update-progress-btn:hover,
+.update-progress-btn:focus {
+  transform: scale(1.05);
+}
+
+.books-form {
+  background-color: rgb(238, 239, 247);
+  background-image: url(./images/dotnoise-light-grey.png);
+  width: 100%;
+  font-family: 'Roboto Slab', serif;
+  padding: 40px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.6);
+}
+
+.books-form h3 {
+  color: #888;
+}
+
+.form-styles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 25px;
+}
+
+.books-form input {
+  padding: 10px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  flex: 2;
+  outline-color: rgb(32, 32, 255, 0.5);
+}
+
+.books-form button:hover,
+.books-form button:focus {
+  transform: scale(1.05);
+}
+
+.form-control {
+  padding: 10px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  color: blue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.circular-progress {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background: conic-gradient(#4395fc 0deg, #ededed 0deg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.author {
-  width: 550px;
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  border-radius: 50%;
 }
 
-.book {
-  width: 200px;
+.progress-value {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #4395fc;
 }
 
-.submit {
-  width: 100px;
-}
+@media all and (max-width: 768px) {
+  .app-container {
+    height: 100%;
+  }
 
-input {
-  padding: 0.4rem;
+  .books-categories {
+    height: 100vh;
+  }
+
+  .nav-ul {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    gap: 10px;
+  }
+
+  .nav-ul li {
+    border-radius: 15px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid grey;
+    background-image: url(images/45-degree-fabric-light.png);
+  }
+
+  .books-list {
+    gap: 50px;
+  }
+
+  .single-book {
+    flex-direction: column;
+    padding: 25px;
+    gap: 50px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .single-book-div1 {
+    width: 100%;
+  }
+
+  .single-book h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .single-book p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .single-book-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-styles {
+    flex-wrap: wrap;
+  }
 }

@@ -1,33 +1,27 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import userIcon from '../images/user.png';
 
-const links = [
-  {
-    id: 1,
-    path: '/',
-    text: 'BooksList',
-  },
-  {
-    id: 2,
-    path: '/categories',
-    text: 'Categories',
-  },
-];
-function Navbar() {
-  return (
-    <div className="navContainer">
-      <nav>
-        <h3 className="logo">EducationSoul</h3>
-        <ul className="navLinks">
-          {links.map((link) => (
-            <li className="NavLink" key={link.id}>
-              <Link to={link.path}>{link.text}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+const Navbar = () => (
+  <nav className="navigation-bar">
+    <div className="nav-div1">
+      <span className="nav-logo">Bookstore CMS</span>
+      <ul className="nav-ul">
+        <li>
+          <Link to="/" className="bookstore-link">
+            Bookstore
+          </Link>
+        </li>
+        <li>
+          <Link to="/Categories" className="categories-link">
+            Categories
+          </Link>
+        </li>
+      </ul>
     </div>
-  );
-}
+    <div className="nav-div2">
+      <img className="nav-user-icon" src={userIcon} alt="user-icon" />
+    </div>
+  </nav>
+);
 
 export default Navbar;

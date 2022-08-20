@@ -1,19 +1,40 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { retrieveBooks, removeBook } from '../redux/books/books';
+import { removeBook, retrieveBooks } from '../redux/books/books';
 
-export default function Book(props) {
-  const { id, title, author } = { ...props };
+function Book(props) {
+  const { title, author, id } = { ...props };
   const dispatch = useDispatch();
   const handleClick = async () => {
     await dispatch(removeBook(id));
     dispatch(retrieveBooks());
   };
   return (
-    <section className="book-wrapper">
-      <h2 className="title">{title}</h2>
-      <h3 className="author">{author}</h3>
-      <button type="button" className="del-button" id={id} onClick={handleClick}>Remove</button>
-    </section>
+    <div className="single-book">
+      <div className="single-book-div1">
+        <p className="genre">Educational</p>
+        <h2>{title}</h2>
+        <p>{author}</p>
+        <div className="single-book-options">
+          <p>Comments</p>
+          <button className="delete-btn" type="button" id={id} onClick={handleClick}>
+            Remove
+          </button>
+          <p>Edit</p>
+        </div>
+      </div>
+      <div className="container">
+        <div className="circular-progress circular-progress-1">
+          <span className="progress-value">17%</span>
+        </div>
+      </div>
+      <div className="update-div">
+        <p>CURRENT CHAPTER</p>
+        <p>Chapter 17</p>
+        <button className="update-progress-btn" type="button">UPDATE PROGRESS</button>
+      </div>
+    </div>
   );
 }
+
+export default Book;
