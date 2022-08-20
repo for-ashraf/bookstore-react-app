@@ -1,361 +1,358 @@
-body {
-  margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-#root {
+.app-container {
+  background-color: #31436e;
+  background-image: url(./images/45-degree-fabric-light.png), radial-gradient(rgba(0, 0, 255, 0.319), black);
   display: flex;
   flex-direction: column;
-  width: 100rem;
-  height: 89.625rem;
-  padding: 2rem;
-  background-color: #f5f6fa;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 3.5%;
 }
 
-button {
-  appearance: auto;
-  writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  letter-spacing: normal;
-  word-spacing: normal;
-  line-height: normal;
-  text-transform: none;
-  text-indent: 0;
-  text-shadow: none;
-  display: inline-block;
-  text-align: center;
-  align-items: flex-start;
-  cursor: default;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 50px 60px;
-  border-width: 2px;
-  border-style: outset;
-  border-image: initial;
+.navigation-bar {
+  width: 100%;
+  height: 5.938rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 15px 40px;
 }
 
-.mainTitle {
-  width: 15vw;
-  height: 5.313vh;
-  margin: 0.375vw 2.938vw 0.125vw 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1.875vw;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #0290ff;
+.nav-logo {
+  min-width: max-content;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+  background: -webkit-linear-gradient(#4395fc, rgb(26, 24, 41));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.navbarContainer {
-  width: 81.25vw;
-  height: 5.938vw;
-  margin: 0 2.5vw 4.063vw 0;
-  padding: 0 0 0 6.25vw;
-  background-color: #fff !important;
-  border: solid 1px #e8e8e8;
+.nav-div1 {
+  display: flex;
+  gap: 20%;
 }
 
-.navbar {
-  align-self: center;
-  margin-top: 20px;
+.nav-div2 {
+  display: flex;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.nav-user-icon {
+  width: 20px;
+}
+
+.nav-ul {
   display: flex;
   align-items: center;
+  gap: 20%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
-.navBarUl {
-  display: flex;
-  gap: 2em;
-  list-style: none;
-}
-
-a {
-  text-decoration: none !important;
-}
-
-.active a {
-  color: #121212 !important;
-  opacity: 1 !important;
-}
-
-.navBarUl li a {
-  width: 3.688rem;
-  height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 0.813rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.9px;
-  color: #121212;
-  opacity: 0.5;
-}
-
-.mainContainer {
-  width: 87.5vw;
-
-  /* height: 68.563vh; */
-  margin: 0 2.5vw 4.063vw 0;
-
-  /* padding: 2%; */
-  border-radius: 4px;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fafafa;
-}
-
-.bookList {
-  display: grid;
-  grid-template-columns: auto;
-  gap: 1em;
-  background-color: #fafafa;
-}
-
-.book {
-  display: flex;
-  width: auto;
-  height: 18vh;
-  margin: 2.313vh 6.25vw 0;
-  padding: 2rem 0 1.625rem 1.688vw;
-  border-radius: 4px;
-  border: solid 1px #e8e8e8;
-  background-color: #fff;
-}
-
-.bookTitle {
-  width: auto;
-  margin: auto 20.188vw 0 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1.375rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.2px;
+.bookstore-link {
   color: #121212;
 }
 
-.bookAuthor {
-  width: auto;
-  height: 1.188vh;
-  margin: auto 0 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4386bf;
+.bookstore-link:hover,
+.bookstore-link:focus {
+  color: rgb(55, 55, 124);
+  border-bottom: 1px solid rgb(55, 55, 124);
 }
 
-.bookInfo {
+.categories-link {
+  color: #121212;
+}
+
+.categories-link:hover,
+.categories-link:focus {
+  color: rgb(55, 55, 124);
+  border-bottom: 1px solid rgb(55, 55, 124);
+}
+
+.books-list {
   display: flex;
   flex-direction: column;
-  margin-top: 0.25vh;
+  gap: 10px;
+  background-color: rgb(238, 239, 247);
+  background-image: url(./images/dotnoise-light-grey.png);
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
 }
 
-.buttonContainer {
-  margin-top: 4vh;
-  margin-bottom: 0;
-}
-
-.bookButton {
-  width: 4.563rem;
-  height: 1.188rem;
-  margin: 0 0.938rem 0 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4386bf;
-  background-color: #fff;
-  border: none;
-  text-align: left;
-}
-
-.removeButton {
-  border-right: 1px solid #bbb;
-}
-
-.form-container {
-  width: 75vw;
-  height: auto;
-  margin: 0 2.5vw 4.063vw 6.3vw;
-  padding: 0 0 1vh 0;
-  border-radius: 4px;
-}
-
-.circular-progress-container {
-  margin-left: auto;
-  width: 5.625vw;
-  height: 5.625vh;
-  padding: 0.63vh 0.625vw 0.75vh 0.75vw;
+.books-categories {
+  background-color: rgb(238, 239, 247);
+  background-image: url(./images/dotnoise-light-grey.png);
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.3);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.circular-progress {
-  position: absolute;
-  border-radius: 50%;
-  width: 4.25vw;
-  height: 4.25vw;
-  border: 5px solid #307bbe;
-  border-left-color: #e8e8e8;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+.books-categories button {
+  background-image: linear-gradient(to bottom, #4395fc, rgb(56, 54, 79));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+  font-weight: 600;
+  transition-duration: 0.2s;
 }
 
-.completed {
-  font-size: 0.875vw;
-  opacity: 0.5;
+.books-form button {
+  background-image: linear-gradient(to bottom, #4395fc, rgb(56, 54, 79));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+  font-weight: 600;
+  transition-duration: 0.2s;
 }
 
-.completed,
-.percent-complete {
-  font-family: "Montserrat", sans-serif;
-  color: #121212;
+.books-categories button:hover,
+.books-categories button:focus {
+  transform: scale(1.05);
 }
 
-.percent-complete {
-  font-size: 2vw;
-}
-
-p {
-  display: block;
-  margin-block-start: 1vw;
-  margin-block-end: 1vw;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-
-.current-chapter-container {
+.single-book {
+  color: rgb(3, 0, 80);
+  background-color: white;
   display: flex;
-  flex-direction: column;
-  grid-gap: 0.5vh;
-  gap: 0.5vh;
-  width: 14vw;
-}
-
-.current-chapter,
-.current-chapter-label {
-  font-family: "Roboto Slab", serif;
-  font-weight: 300;
-  color: #121212;
-}
-
-.current-chapter-label {
-  font-size: 0.813vw;
-  opacity: 0.5;
-}
-
-.progress-divider {
-  width: 0.125vw;
-  height: 8.375vh;
-  margin: 0 3.688vw 0 4.938vh;
-  background-color: #e8e8e8;
-}
-
-.current-chapter {
-  margin-top: 0.438vh;
-  font-size: 1vw;
-  letter-spacing: -0.4px;
-}
-
-.progress-container {
-  margin-left: auto;
-  display: flex;
+  justify-content: space-between;
   align-items: center;
+  border: 1px solid #e8e8e8;
+  padding: 25px 10% 25px 25px;
+  font-family: 'Roboto Slab', serif;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  gap: 20px;
 }
 
-div {
-  display: block;
+.single-book-div1 {
+  width: 400px;
+  overflow: hidden;
 }
 
-.primary-button {
-  cursor: pointer;
-  border: none;
-  padding: 0.5vh 2vw;
-  background-color: #0290ff;
-  border-radius: 3px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  color: #fff;
-}
-
-.primary-button-big {
-  cursor: pointer;
-  width: 30%;
-  padding: 2vw;
-  text-align: center;
-  border-radius: 3px;
-  background-color: #0290ff;
-  border: none;
-  letter-spacing: 0.5px;
-  color: #fff;
-  font-size: 0.813rem;
-  font-weight: 700;
-  font-family: "Roboto Slab", serif;
-}
-
-.horizontal-divider {
-  height: 0.125rem;
-  background-color: #e8e8e8;
-  width: 100%;
-  margin: 2.5rem 0 1.813rem;
-}
-
-.form-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.18px;
+.single-book-div1 .genre {
   color: #888;
 }
 
-h2 {
-  display: block;
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  font-weight: bold;
+.single-book-div1 p {
+  color: #4386bf;
 }
 
-.form-title,
-.input {
-  font-family: "Montserrat", sans-serif;
-}
-
-.input {
-  padding: 12px;
-  border-radius: 4px;
-  border: 1px solid #e8e8e8;
-  background-color: #fff;
-  font-size: 1rem;
-  letter-spacing: -0.15px;
-  color: #121212;
-}
-
-.form {
-  margin-top: 20px;
+.single-book-options {
   display: flex;
-  grid-gap: 32px;
-  gap: 32px;
+  gap: 25px;
+  align-items: center;
 }
 
-.title-input {
-  width: 50%;
+.delete-btn {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.05em;
+  color: #4386bf;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  color: rgb(199, 3, 3);
+}
+
+.update-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.update-progress-btn {
+  background-image: linear-gradient(to bottom, #4395fc, rgb(56, 54, 79));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+  font-weight: 600;
+  transition-duration: 0.2s;
+}
+
+.update-progress-btn:hover,
+.update-progress-btn:focus {
+  transform: scale(1.05);
+}
+
+.books-form {
+  background-color: rgb(238, 239, 247);
+  background-image: url(./images/dotnoise-light-grey.png);
+  width: 100%;
+  font-family: 'Roboto Slab', serif;
+  padding: 40px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.6);
+}
+
+.books-form h3 {
+  color: #888;
+}
+
+.form-styles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 25px;
+}
+
+.books-form input {
+  padding: 10px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  flex: 2;
+  outline-color: rgb(32, 32, 255, 0.5);
+}
+
+.books-form button:hover,
+.books-form button:focus {
+  transform: scale(1.05);
+}
+
+.form-control {
+  padding: 10px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  color: blue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.circular-progress {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background: conic-gradient(#4395fc 0deg, #ededed 0deg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.progress-value {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #4395fc;
+}
+
+@media all and (max-width: 768px) {
+  .app-container {
+    height: 100%;
+  }
+
+  .books-categories {
+    height: 100vh;
+  }
+
+  .nav-ul {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    gap: 10px;
+  }
+
+  .nav-ul li {
+    border-radius: 15px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid grey;
+    background-image: url(images/45-degree-fabric-light.png);
+  }
+
+  .books-list {
+    gap: 50px;
+  }
+
+  .single-book {
+    flex-direction: column;
+    padding: 25px;
+    gap: 50px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .single-book-div1 {
+    width: 100%;
+  }
+
+  .single-book h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .single-book p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .single-book-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-styles {
+    flex-wrap: wrap;
+  }
 }
