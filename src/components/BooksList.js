@@ -12,7 +12,7 @@ function BookList() {
   });
   return (
     <>
-      <div className="list-container">
+      <div className="bookList">
         {state.map((book) => (
           <Book
             id={book.id}

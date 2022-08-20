@@ -2,16 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import './index.css';
 import App from './App';
+import Navbar from './components/Navbar';
 import bookStore from './redux/configureStore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={bookStore}>
-        <App />
-      </Provider>
-    </BrowserRouter>
+    <Provider store={bookStore}>
+      <BrowserRouter>
+        <Navbar />
+        <div className="mainContainer">
+          <App />
+        </div>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 );

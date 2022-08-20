@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css';
-import { IoIosPerson } from 'react-icons/io';
 
 const links = [
   {
@@ -16,23 +14,18 @@ const links = [
 ];
 function Navbar() {
   return (
-    <nav>
-      <div className="navContainer">
-        <h3 className="logo">Bookstore CMS</h3>
-        <ul className="navLinks">
+    <div className="navbarContainer">
+      <nav className="navbar">
+        <h1 className="mainTitle">Bookstore CMS</h1>
+        <ul className="navBarUl">
           {links.map((link) => (
-            <li className="NavLink" key={link.id}>
-              <Link to={link.path}>
-                {link.text}
-              </Link>
+            <li key={link.id} className={link.text}>
+              <Link to={link.path}>{link.text}</Link>
             </li>
           ))}
         </ul>
-        <div className="profile-container">
-          <IoIosPerson className="profile-icon" />
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
 
