@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import './App.css';
 import BookList from './components/BooksList';
 import Categories from './components/Categories';
-import Navbar from './components/Navbar';
 import { retrieveBooks } from './redux/books/books';
 
 function App() {

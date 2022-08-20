@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook, retrieveBooks } from '../redux/books/books';
+import './BookForm.css';
 
 function AddBookForm() {
   const [bookData, createBook] = useState({ title: '', author: '' });
@@ -29,7 +30,7 @@ function AddBookForm() {
         <form onSubmit={handleSubmit} className="form">
           <input type="text" className="input title-input" id="titleInput" required name="title" placeholder="Book title" onChange={newBook} />
           <input type="text" className="input" id="authorInput" required name="author" placeholder="Author" onChange={newBook} />
-          <button className="primary-button-big blueButton" type="submit">ADD BOOK</button>
+          <button type="submit">Add Book</button>
         </form>
       </div>
     </>
